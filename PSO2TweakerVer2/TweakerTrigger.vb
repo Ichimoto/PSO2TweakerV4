@@ -240,7 +240,7 @@ Public Class TweakerTrigger
                             frmDownloader.LabelX6.Text = "Downloading " & Filename & " (" & String.Format("{0:N2}%", Math.Truncate(e.BytesReceived / CDbl(e.TotalBytesToReceive) * 100 * 100) / 100) & ")"
                         End If
 
-                        frmDownloader.lblTotal.Text = "Total amount downloaded: " & Helper.SizeSuffix(TotalDownloadedQuantum) & vbCrLf & "Total files downloaded: " & _downloadedfilecount & vbCrLf & "Files left to download: " & patchfilecount - _downloadedfilecount & "/" & patchfilecount
+                        frmDownloader.lblTotal.Text = "Total amount downloaded: " & Helper.SizeSuffix(TotalDownloadedQuantum) & vbCrLf & "Files downloaded: " & _downloadedfilecount & "/" & patchfilecount
                         If (patchfilecount - _downloadedfilecount) < 2 And frmDownloader.Visible = True Then
                             DoneDownloading = True
                             patchwriter.Flush()
